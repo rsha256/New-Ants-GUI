@@ -90,9 +90,8 @@ class AntsGUI:
         self.initialized = True
         self.canvas = graphics.Canvas()
         #
-        from PIL import ImageTk
-        image = ImageTk.PhotoImage(file="/Users/rahul/cal/CS61A/projects/ants/assets/main-background.png")
-
+        # from PIL import ImageTk
+        # image = ImageTk.PhotoImage(file="/Users/rahul/cal/CS61A/projects/ants/assets/main-background.png")
         #
         self.food_text = self.canvas.draw_text('Food: 1  Time: 0', (20, 20))
         self.ant_text = self.canvas.draw_text('Ant selected: None', (20, 140))
