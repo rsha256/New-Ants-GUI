@@ -265,7 +265,7 @@ class AntsGUI:
             if place.ant is not None and isinstance(place.ant, ants.ContainerAnt):
                 valid_insects.add(place.ant.contained_ant)
             for insect in current - valid_insects:
-                if not place.exit or insect not in self.images[place.exit.name]:
+                if not place.exit or insect not in self.images[place.exit.name] and insect not in place.entrance.bees:
                     image = self.images[name].pop(insect)
                     pos = (self.place_points[name][0], CRYPT)
                     self.canvas.slide_shape(image, pos, STRATEGY_SECONDS)
